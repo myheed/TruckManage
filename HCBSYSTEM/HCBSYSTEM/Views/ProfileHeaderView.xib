@@ -14,7 +14,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gx3-zf-8RH">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnOrange" translatesAutoresizingMaskIntoConstraints="NO" id="Y9H-Xp-nJy">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_default" translatesAutoresizingMaskIntoConstraints="NO" id="Y9H-Xp-nJy">
                             <rect key="frame" x="20" y="70" width="80" height="80"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="Iru-ar-AFj"/>
@@ -24,30 +24,47 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVd-Fy-MV0">
                             <rect key="frame" x="126" y="32" width="68" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="东方-cd134" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbo-qg-ixy">
                             <rect key="frame" x="115" y="89" width="90" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="东方物流公司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqp-Jj-Wbp">
                             <rect key="frame" x="115" y="118" width="102" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGu-HE-Hhd">
+                            <rect key="frame" x="272" y="23" width="40" height="40"/>
+                            <subviews>
+                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_set" translatesAutoresizingMaskIntoConstraints="NO" id="mzh-4k-TIY">
+                                    <rect key="frame" x="10" y="10" width="21" height="20"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.99607843139999996" green="0.81960784310000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="mzh-4k-TIY" firstAttribute="centerY" secondItem="aGu-HE-Hhd" secondAttribute="centerY" id="Aoq-Mu-yQz"/>
+                                <constraint firstAttribute="width" constant="40" id="FdB-X4-LT3"/>
+                                <constraint firstAttribute="height" constant="40" id="Mzj-51-BXG"/>
+                                <constraint firstItem="mzh-4k-TIY" firstAttribute="centerX" secondItem="aGu-HE-Hhd" secondAttribute="centerX" id="ijC-LY-KcX"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.99215686274509807" green="0.81568627450980391" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="Vqp-Jj-Wbp" firstAttribute="top" secondItem="qbo-qg-ixy" secondAttribute="bottom" constant="8" id="2zQ-rp-z9k"/>
                         <constraint firstItem="Vqp-Jj-Wbp" firstAttribute="leading" secondItem="qbo-qg-ixy" secondAttribute="leading" id="BVr-MI-DT5"/>
                         <constraint firstItem="JVd-Fy-MV0" firstAttribute="top" secondItem="Gx3-zf-8RH" secondAttribute="top" constant="32" id="CIO-hf-fJF"/>
+                        <constraint firstAttribute="trailing" secondItem="aGu-HE-Hhd" secondAttribute="trailing" constant="8" id="P2x-9g-8YG"/>
                         <constraint firstAttribute="height" constant="180" id="RYV-X3-hQL"/>
                         <constraint firstItem="JVd-Fy-MV0" firstAttribute="centerX" secondItem="Gx3-zf-8RH" secondAttribute="centerX" id="TbW-oi-ccJ"/>
                         <constraint firstAttribute="bottom" secondItem="Y9H-Xp-nJy" secondAttribute="bottom" constant="30" id="Vo1-pZ-UtW"/>
+                        <constraint firstItem="aGu-HE-Hhd" firstAttribute="centerY" secondItem="JVd-Fy-MV0" secondAttribute="centerY" id="eLX-nF-x6Q"/>
                         <constraint firstItem="Y9H-Xp-nJy" firstAttribute="leading" secondItem="Gx3-zf-8RH" secondAttribute="leading" constant="20" id="j8C-dQ-llK"/>
                         <constraint firstItem="qbo-qg-ixy" firstAttribute="leading" secondItem="Y9H-Xp-nJy" secondAttribute="trailing" constant="15" id="nhl-Rf-qPG"/>
                         <constraint firstItem="qbo-qg-ixy" firstAttribute="centerY" secondItem="Y9H-Xp-nJy" secondAttribute="centerY" constant="-10" id="seA-AP-qD2"/>
@@ -82,7 +99,7 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSq-J7-Ion">
                             <rect key="frame" x="106" y="10" width="1" height="40"/>
-                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="CPc-Q2-h6x"/>
                                 <constraint firstAttribute="height" constant="40" id="N7Q-z6-DcW"/>
@@ -114,7 +131,7 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05I-lD-9ts">
                             <rect key="frame" x="213" y="10" width="1" height="40"/>
-                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Iyo-Mj-wa9"/>
                                 <constraint firstAttribute="width" constant="1" id="Mxf-UW-S1c"/>
@@ -178,10 +195,20 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imgHead" destination="Y9H-Xp-nJy" id="5bH-nc-HgY"/>
+                <outlet property="lbDetailName" destination="Vqp-Jj-Wbp" id="xLM-px-sQ8"/>
+                <outlet property="lbName" destination="qbo-qg-ixy" id="u6s-B5-4p0"/>
+                <outlet property="lbOneDaySumKM" destination="Aw0-Fl-JqL" id="zhC-jV-IzO"/>
+                <outlet property="lbOneMonthSumKM" destination="dri-Ex-5OS" id="Ght-sC-Kon"/>
+                <outlet property="lbTruckNum" destination="JwK-0D-rRq" id="3QU-2O-08L"/>
+                <outlet property="setupView" destination="aGu-HE-Hhd" id="yIn-fB-wPY"/>
+            </connections>
             <point key="canvasLocation" x="273" y="417"/>
         </view>
     </objects>
     <resources>
-        <image name="btnOrange" width="106" height="32"/>
+        <image name="icon_set" width="21" height="20"/>
+        <image name="user_default" width="68" height="68"/>
     </resources>
 </document>

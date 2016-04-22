@@ -11,7 +11,7 @@
 #import "JLTipsView.h"
 
 #define WeakSelfType __weak __typeof(&*self)
-#define kHudIntervalNormal 1.5f
+#define kHudIntervalNormal 1.0f
 
 @interface BaseVController : UIViewController
 // 显示该视图控制器的时候传入的参数

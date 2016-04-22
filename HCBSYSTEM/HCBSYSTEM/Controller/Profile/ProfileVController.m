@@ -8,6 +8,7 @@
 
 #import "ProfileVController.h"
 #import "ProfileHeaderView.h"
+#import "UserLoginVController.h"
 
 #define KHeightOfHeaderView       100
 #define KWidthOfHeadImage         80
@@ -32,8 +33,6 @@
 static void *ObservationContext = &ObservationContext;
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self.navigationController.navigationBar setHidden:YES];
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -41,14 +40,17 @@ static void *ObservationContext = &ObservationContext;
     [self.view addSubview:self.headerView];
     
     [[Login sharedInstance] addObserver:self forKeyPath:@"isLogined" options:NSKeyValueObservingOptionInitial context:&ObservationContext];
-    
-    [self.navigationController.navigationBar setBarTintColor:[UIColor blueColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
@@ -74,6 +76,10 @@ static void *ObservationContext = &ObservationContext;
     if (_headerView == nil) {
         CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 240);
         _headerView = [[ProfileHeaderView alloc] init];
+        WeakSelfType blockSelf = self;
+        [_headerView.setupView bk_whenTapped:^{
+            [blockSelf pushViewController:@"SetUpVController"];
+        }];
         _headerView.frame = rect;
     }
     return _headerView;
@@ -89,14 +95,14 @@ static void *ObservationContext = &ObservationContext;
 -(NSArray *)imgArray
 {
     if (_imgArray == nil) {
-        _imgArray = @[@"wallet",@"reportTable"];
+        _imgArray = @[@"icon_modifyPwd",@"icon_msg"];
     }
     return _imgArray;
 }
 - (NSArray *)VCArray
 {
     if (_VCArray == nil) {
-        _VCArray = @[@"",@""];
+        _VCArray = @[@"ResetPwdVC",@"MessagePushVC"];
     }
     return _VCArray;
 }
@@ -113,21 +119,42 @@ static void *ObservationContext = &ObservationContext;
     static NSString *CELLID = @"PROFILLCELL";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CELLID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELLID];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.imageView.image = [UIImage imageNamed:self.imgArray[indexPath.row]];
     cell.textLabel.text = self.dataArray[indexPath.row];
     
     return cell;
 }
-
+- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    CGRect rect = CGRectMake(0, 10, SCREEN_WIDTH, 44);
+    UIView *footerView = [[UIView alloc] initWithFrame:rect];
+    footerView.backgroundColor = tableView.backgroundColor;
+    UILabel *lbLoginout = [[UILabel alloc] initWithFrame:rect];
+    lbLoginout.text = @"退出登录";
+    lbLoginout.textAlignment = NSTextAlignmentCenter;
+    lbLoginout.textColor = [UIColor blackColor];
+    lbLoginout.backgroundColor = [UIColor whiteColor];
+    lbLoginout.userInteractionEnabled = YES;
+    WeakSelfType blockSelf = self;
+    [lbLoginout bk_whenTapped:^{
+        [[Login sharedInstance] logout];
+        UserLoginVController *loginVC = [[UserLoginVController alloc] init];
+        [blockSelf presentViewController:loginVC animated:YES completion:nil];
+    }];
+    
+    [footerView addSubview:lbLoginout];
+    return footerView;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 5;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 5;
+    return 54;
 }
 
 #pragma mark - tableViewDelegate

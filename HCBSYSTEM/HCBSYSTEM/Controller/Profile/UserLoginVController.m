@@ -76,7 +76,7 @@
 {
     [self.txtUserName resignFirstResponder];
     [self.txtPasswd resignFirstResponder];
-    WeakSelfType _blockSelf = self;
+//    WeakSelfType _blockSelf = self;
 //    [UIView animateWithDuration:0.2 animations:^{
 //        _blockSelf.view.top = 0;
 //    }];
@@ -84,7 +84,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    WeakSelfType _blockSelf = self;
+//    WeakSelfType _blockSelf = self;
 //    [UIView animateWithDuration:0.2 animations:^{
 //        _blockSelf.view.top = -50;
 //    }];
@@ -110,21 +110,31 @@
     [dictParam setObject:cellPhone forKey:@"UserName"];
     [dictParam setObject:passwd forKey:@"Password"];
 
+    WeakSelfType blockSelf = self;
     [[AFNetworkManager sharedInstance] AFNHttpRequestWithAPI:KLogin andDictParam:dictParam requestSuccessed:^(id responseObject) {
         NSArray *data = [UserModel mj_objectArrayWithKeyValuesArray:responseObject];
         UserModel *user = data[0];
         if ([user.userID integerValue] > 0) {
-            [self showResultThenHide:@"登录成功"];
+            [blockSelf showSuccessResult:@"登录成功"];
             [[Login sharedInstance] login:user withRecordPwd:bRecordPasswd];
-            [self.view removeFromSuperview];
-            [self removeFromParentViewController];
+            [blockSelf performSelector:@selector(loginSuccess) withObject:nil afterDelay:kHudIntervalNormal];
         }
         else{
-            [self showResultThenHide:@"登录失败"];
+            [blockSelf showResultThenHide:@"登录失败"];
         }
     } requestFailure:^(NSInteger errorCode, NSString *errorMessage) {
-        [self showResultThenHide:@"登录失败"];
+        [blockSelf showResultThenHide:@"登录失败"];
     }];
+}
+
+- (void)loginSuccess
+{
+    if (self.bMainVCcome) {
+        [self.view removeFromSuperview];
+    }
+    else{
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    }
 }
 
 // 系统演示

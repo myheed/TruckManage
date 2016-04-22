@@ -28,36 +28,24 @@
 - (NSArray *)dataArray
 {
     if (_dataArray == nil) {
-        _dataArray = @[@[@"修改密码"],@[@"退出登录"]];
+        _dataArray = @[@"关于我们",@"意见反馈"];
     }
     return _dataArray;
 }
 
--(NSArray *)imgArray
-{
-    if (_imgArray == nil) {
-        _imgArray = @[@[@"wallet"],@[@"setting"]];
-    }
-    return _imgArray;
-}
 - (NSArray *)VCArray
 {
     if (_VCArray == nil) {
-        _VCArray = @[@[@"ResetPWDVController"],@[@""]];
+        _VCArray = @[@"AboutVController",@"FeedbackVController"];
     }
     return _VCArray;
 }
 
 
 #pragma mark - tableViewDataSource
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return self.dataArray.count;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.dataArray[section] count];
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,25 +56,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CELLID];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = self.dataArray[indexPath.section][indexPath.row];
-    
-    cell.imageView.image = [UIImage imageNamed:self.imgArray[indexPath.section][indexPath.row]];
-    
+    cell.textLabel.text = self.dataArray[indexPath.row];
     return cell;
 }
-
-
-#pragma mark - tableViewDelegate
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 1;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == (self.dataArray.count-1)){
-        [[Login sharedInstance] logout];
-        [self popViewController];
-    }
-    else{
-        [self pushViewController:self.VCArray[indexPath.section][indexPath.row] withParams:nil];
-    }
-    
+    [self pushViewController:self.VCArray[indexPath.row] withParams:nil];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

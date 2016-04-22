@@ -46,6 +46,16 @@
 		244262BF1CC71E220024550F /* ProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 244262BE1CC71E220024550F /* ProfileHeaderView.m */; };
 		244262C11CC71E340024550F /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244262C01CC71E340024550F /* ProfileHeaderView.xib */; };
 		244262C51CC7653F0024550F /* JLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 244262C41CC7653F0024550F /* JLSlider.m */; };
+		2475550E1CCA014500299331 /* AboutVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2475550C1CCA014500299331 /* AboutVController.m */; };
+		2475550F1CCA014500299331 /* AboutVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2475550D1CCA014500299331 /* AboutVController.xib */; };
+		247555131CCA017A00299331 /* FeedbackVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247555111CCA017A00299331 /* FeedbackVController.m */; };
+		247555141CCA017A00299331 /* FeedbackVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247555121CCA017A00299331 /* FeedbackVController.xib */; };
+		247555181CCA0E0A00299331 /* ResetPwdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 247555161CCA0E0A00299331 /* ResetPwdVC.m */; };
+		247555191CCA0E0A00299331 /* ResetPwdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247555171CCA0E0A00299331 /* ResetPwdVC.xib */; };
+		2475551D1CCA12E200299331 /* MessagePushVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2475551B1CCA12E200299331 /* MessagePushVC.m */; };
+		2475551E1CCA12E200299331 /* MessagePushVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2475551C1CCA12E200299331 /* MessagePushVC.xib */; };
+		247555221CCA159B00299331 /* MsgPushTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247555201CCA159B00299331 /* MsgPushTableCell.m */; };
+		247555231CCA159B00299331 /* MsgPushTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247555211CCA159B00299331 /* MsgPushTableCell.xib */; };
 		249268F71CB364F800AB34D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249268F61CB364F800AB34D6 /* main.m */; };
 		249268FA1CB364F800AB34D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 249268F91CB364F800AB34D6 /* AppDelegate.m */; };
 		249268FD1CB364F800AB34D6 /* MainTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 249268FC1CB364F800AB34D6 /* MainTabBarVC.m */; };
@@ -143,6 +153,21 @@
 		244262C01CC71E340024550F /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		244262C31CC7653F0024550F /* JLSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLSlider.h; sourceTree = "<group>"; };
 		244262C41CC7653F0024550F /* JLSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLSlider.m; sourceTree = "<group>"; };
+		2475550B1CCA014500299331 /* AboutVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVController.h; sourceTree = "<group>"; };
+		2475550C1CCA014500299331 /* AboutVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVController.m; sourceTree = "<group>"; };
+		2475550D1CCA014500299331 /* AboutVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVController.xib; sourceTree = "<group>"; };
+		247555101CCA017A00299331 /* FeedbackVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackVController.h; sourceTree = "<group>"; };
+		247555111CCA017A00299331 /* FeedbackVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackVController.m; sourceTree = "<group>"; };
+		247555121CCA017A00299331 /* FeedbackVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackVController.xib; sourceTree = "<group>"; };
+		247555151CCA0E0A00299331 /* ResetPwdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdVC.h; sourceTree = "<group>"; };
+		247555161CCA0E0A00299331 /* ResetPwdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdVC.m; sourceTree = "<group>"; };
+		247555171CCA0E0A00299331 /* ResetPwdVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPwdVC.xib; sourceTree = "<group>"; };
+		2475551A1CCA12E200299331 /* MessagePushVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePushVC.h; sourceTree = "<group>"; };
+		2475551B1CCA12E200299331 /* MessagePushVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagePushVC.m; sourceTree = "<group>"; };
+		2475551C1CCA12E200299331 /* MessagePushVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagePushVC.xib; sourceTree = "<group>"; };
+		2475551F1CCA159B00299331 /* MsgPushTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgPushTableCell.h; sourceTree = "<group>"; };
+		247555201CCA159B00299331 /* MsgPushTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgPushTableCell.m; sourceTree = "<group>"; };
+		247555211CCA159B00299331 /* MsgPushTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MsgPushTableCell.xib; sourceTree = "<group>"; };
 		249268F21CB364F800AB34D6 /* HCBSYSTEM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCBSYSTEM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249268F61CB364F800AB34D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		249268F81CB364F800AB34D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -314,6 +339,18 @@
 				241785351CB38E620083BF43 /* SetUpVController.h */,
 				241785361CB38E620083BF43 /* SetUpVController.m */,
 				241785371CB38E620083BF43 /* SetUpVController.xib */,
+				247555151CCA0E0A00299331 /* ResetPwdVC.h */,
+				247555161CCA0E0A00299331 /* ResetPwdVC.m */,
+				247555171CCA0E0A00299331 /* ResetPwdVC.xib */,
+				2475551A1CCA12E200299331 /* MessagePushVC.h */,
+				2475551B1CCA12E200299331 /* MessagePushVC.m */,
+				2475551C1CCA12E200299331 /* MessagePushVC.xib */,
+				2475550B1CCA014500299331 /* AboutVController.h */,
+				2475550C1CCA014500299331 /* AboutVController.m */,
+				2475550D1CCA014500299331 /* AboutVController.xib */,
+				247555101CCA017A00299331 /* FeedbackVController.h */,
+				247555111CCA017A00299331 /* FeedbackVController.m */,
+				247555121CCA017A00299331 /* FeedbackVController.xib */,
 				241785381CB38E620083BF43 /* UserInfoVController.h */,
 				241785391CB38E620083BF43 /* UserInfoVController.m */,
 				2417853A1CB38E620083BF43 /* UserInfoVController.xib */,
@@ -358,6 +395,9 @@
 				244262BD1CC71E220024550F /* ProfileHeaderView.h */,
 				244262BE1CC71E220024550F /* ProfileHeaderView.m */,
 				244262C01CC71E340024550F /* ProfileHeaderView.xib */,
+				2475551F1CCA159B00299331 /* MsgPushTableCell.h */,
+				247555201CCA159B00299331 /* MsgPushTableCell.m */,
+				247555211CCA159B00299331 /* MsgPushTableCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -583,15 +623,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2475551E1CCA12E200299331 /* MessagePushVC.xib in Resources */,
 				243F30E21CB5040100E4B66F /* TracePlayVController.xib in Resources */,
 				249269051CB364F800AB34D6 /* LaunchScreen.storyboard in Resources */,
 				249269021CB364F800AB34D6 /* Assets.xcassets in Resources */,
 				243F30DD1CB4B83400E4B66F /* TruckInfoTableCell.xib in Resources */,
 				2417854D1CB38E620083BF43 /* UserInfoVController.xib in Resources */,
+				247555191CCA0E0A00299331 /* ResetPwdVC.xib in Resources */,
+				2475550F1CCA014500299331 /* AboutVController.xib in Resources */,
 				241F61771CBF9696008F56A5 /* CustomAnnotationView.xib in Resources */,
+				247555141CCA017A00299331 /* FeedbackVController.xib in Resources */,
 				2417854F1CB38E620083BF43 /* UserLoginVController.xib in Resources */,
 				244262C11CC71E340024550F /* ProfileHeaderView.xib in Resources */,
 				2417854B1CB38E620083BF43 /* SetUpVController.xib in Resources */,
+				247555231CCA159B00299331 /* MsgPushTableCell.xib in Resources */,
 				2434512B1CC5F3760061D66E /* MessageTableCell.xib in Resources */,
 				241F617C1CBFA232008F56A5 /* TruckInfoVC.xib in Resources */,
 				249269001CB364F800AB34D6 /* Main.storyboard in Resources */,
@@ -667,8 +712,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2475551D1CCA12E200299331 /* MessagePushVC.m in Sources */,
 				2417854E1CB38E620083BF43 /* UserLoginVController.m in Sources */,
 				241785261CB38E580083BF43 /* TimeUtils.m in Sources */,
+				247555221CCA159B00299331 /* MsgPushTableCell.m in Sources */,
+				2475550E1CCA014500299331 /* AboutVController.m in Sources */,
 				2417851B1CB38E580083BF43 /* NSString+More.m in Sources */,
 				241785251CB38E580083BF43 /* JLTipsView.m in Sources */,
 				241785461CB38E620083BF43 /* BaseVController.m in Sources */,
@@ -681,6 +729,7 @@
 				244262C51CC7653F0024550F /* JLSlider.m in Sources */,
 				241785491CB38E620083BF43 /* ProfileVController.m in Sources */,
 				241785211CB38E580083BF43 /* JLCache.m in Sources */,
+				247555181CCA0E0A00299331 /* ResetPwdVC.m in Sources */,
 				2417851D1CB38E580083BF43 /* UITextView+PlaceHolder.m in Sources */,
 				241785241CB38E580083BF43 /* TableRefresh.m in Sources */,
 				2417851E1CB38E580083BF43 /* UIView+RGSize.m in Sources */,
@@ -689,6 +738,7 @@
 				241F61751CBF8194008F56A5 /* CustomAnnotationView.m in Sources */,
 				2417854A1CB38E620083BF43 /* SetUpVController.m in Sources */,
 				244262BF1CC71E220024550F /* ProfileHeaderView.m in Sources */,
+				247555131CCA017A00299331 /* FeedbackVController.m in Sources */,
 				241785221CB38E580083BF43 /* StorageCache.m in Sources */,
 				249268FA1CB364F800AB34D6 /* AppDelegate.m in Sources */,
 				243F30D81CB4B33B00E4B66F /* CarBarnVController.m in Sources */,
@@ -844,7 +894,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HCBSYSTEM/CarManage.pch";
 				INFOPLIST_FILE = HCBSYSTEM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itte.HCBSYSTEM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -861,7 +911,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HCBSYSTEM/CarManage.pch";
 				INFOPLIST_FILE = HCBSYSTEM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itte.HCBSYSTEM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

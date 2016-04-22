@@ -20,6 +20,7 @@
     if(![Login sharedInstance].isLogined)
     {
         self.loginVC = [[UserLoginVController alloc] init];
+        self.loginVC.bMainVCcome = YES;
         self.loginVC.view.frame = self.view.bounds;
         [self.view addSubview:self.loginVC.view];
         [self.loginVC.view bringSubviewToFront:self.view];

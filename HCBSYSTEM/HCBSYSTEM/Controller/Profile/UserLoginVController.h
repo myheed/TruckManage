@@ -9,5 +9,5 @@
 #import "BaseVController.h"
 
 @interface UserLoginVController : BaseVController
-
+@property (assign, nonatomic) BOOL bMainVCcome;
 @end

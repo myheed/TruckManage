@@ -9,7 +9,7 @@
 #import "UITextView+PlaceHolder.h"
 #import <objc/runtime.h>
 
-#define KLeft_Margin 5
+#define KLeft_Margin 8
 #define KTop_Margin 8
 
 @implementation UITextView (PlaceHolder)
@@ -49,7 +49,6 @@
         label.textColor = [UIColor lightGrayColor];
         label.textAlignment = NSTextAlignmentLeft;
         label.numberOfLines = 0;
-        
         [self addSubview:label];
         
         // 关联到UITextView

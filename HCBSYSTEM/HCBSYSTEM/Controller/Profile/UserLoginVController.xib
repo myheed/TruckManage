@@ -26,7 +26,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2Y-oc-TQQ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="zHL-7G-SCP">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="zHL-7G-SCP">
                             <rect key="frame" x="48" y="50" width="225" height="81"/>
                         </imageView>
                     </subviews>
@@ -180,7 +180,7 @@
                 <constraint firstItem="p2Y-oc-TQQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yc0-cV-UaV"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="95" y="380"/>
+            <point key="canvasLocation" x="24" y="226"/>
         </view>
     </objects>
     <resources>

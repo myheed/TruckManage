@@ -65,7 +65,7 @@
     //设置字体为白色
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     //设置Title为白色,Title大小为18
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont boldSystemFontOfSize:18]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:[UIFont boldSystemFontOfSize:18]}];
     [[UITabBar appearance] setBarTintColor:RGB(51, 51, 51)];
 //    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabBar_bg"]];
 }
